@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Game News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <img src="img/logo_color.png" alt="Game news" style="max-width:250px;">
+        </div>
+
+        <div class="col-md-6 text-right">
+          <button type="button" class="btn btn-outline-info" id="btnNew">New game</button>
+        </div>
+      </div>
+    </header>
+
+    <hr class="border-secondary">
+
+    <section>
+      <div class="row" id="section">
+        <!--
+        <div class="col-md-4">
+          <div class="card border-primary ">
+            <div class="card-header">Resident Evil</div>
+            <div class="card-body">
+              <div class="videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d9s384vZP3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-md-3">
+                  <button type="button" name="button" class="mb-2 w-100 btn btn-outline-warning">Edit</button>
+                </div>
+                <div class="col-md-6">
+                  <button type="button" name="button" class="mb-2 w-100 btn btn-outline-success" onclick="openModalViewGame(21)">View</button>
+                </div>
+                <div class="col-md-3">
+                  <button type="button" name="button" class="mb-2 w-100 btn btn-outline-danger" onclick="deleteGame(78)">Del</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+      </div>
+    </section>
+  </div>
+
+
+  <!---MODAL FORM-->
+  <div class="modal fade" id="modalNewGame" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <form id="frmGame" method="post">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create or Edit new game</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="txtTitle">Title</label>
+                <input type="hidden" id="txtId" value="">
+                <input type="text" id="txtTitle" placeholder="Game title" class="form-control">
+              </div>
+
+              <div class="col-md-5">
+                <label for="txtDescription">Description</label>
+                <input type="text" id="txtDescription" placeholder="Game description" class="form-control">
+              </div>
+
+              <div class="col-md-3">
+                <label for="txtVideoid">Video ID</label>
+                <input type="text" id="txtVideoid" placeholder="d9s384vZP3M" class="form-control">
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="alert alert-info" id="dvAlert">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-success" id="btnSubmit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!--MODAL VIEW-->
+  <div class="modal fade" id="modalViewGame" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titleView">Resident</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="gameInfo">
+        <!--TEMPLATE-
+        <div class="videoWrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/d9s384vZP3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <hr class="border-info">
+        <div>
+          Resident Resident Resident Resident Resident Resident Resident Resident Resident Resident Resident Resident
+        </div>
+        TEMPLATE-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

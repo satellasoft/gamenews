@@ -1,0 +1,19 @@
+=======Campos
+id = CPF da aplicação, identificador
+titulo = nome do jogo
+descricao = Breve descrição do jogo
+videoid = Trailer do jogo
+
+=======Validações
+id = número && > 0
+titulo = > 3 && <= 100
+descricao = >= 10 && <= 250
+videoid = != "" && <= 15
+
+
+======ENDPOINT
+GET    = /game     | Retorna TODOS          | OK
+GET    = /game/:id | Retorna Game pelo ID   | OK
+POST   = /game     | Criar um novo game     | OK
+PUT    = /game/:id | Altera um game         | NO
+DELETE = /game/:id | Deleta um game         | OK

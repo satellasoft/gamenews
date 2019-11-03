@@ -1,0 +1,17 @@
+{
+  "name": "gunnar/gamenews",
+  "description": "Projeto sit de jogos",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gunnar Correa",
+      "email": "gunnercorrea@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload" : {
+    "psr-4" : {
+      "App\\" : "App/"
+    }
+  }
+}
